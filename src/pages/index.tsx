@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import tw from 'tailwind-styled-components'
+import GithubLastCommit from "../components/GithubLastCommit"
 
 import Layout from "../components/layout"
 
@@ -95,7 +96,7 @@ export default () => {
 
       </div>
       <div className="right w-1/2">
-
+        <GithubLastCommit/>
       </div>
     </div>
   </Layout>
