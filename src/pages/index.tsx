@@ -72,7 +72,7 @@ export default () => {
 
   return <Layout>
     <div className="container mx-auto flex pt-40">
-      <div className="left w-1/2 flex flex-col justify-end items-start">
+      <div className="left w-3/5 flex flex-col justify-end items-start">
         
         <StyledAvatarWrapper style={{maxWidth: 250}}>
           <StyledAvatar
@@ -80,13 +80,13 @@ export default () => {
           alt="Picture of wahid"/>
         </StyledAvatarWrapper>
         
-        <StyledName>Wahid Farid</StyledName>
+        <StyledName>Wahid M. Farid</StyledName>
 
         <StyledJobTitle>Full-stack web developer</StyledJobTitle>
 
         <StyledDescription>
           6 years of experience across multiple frameworks,
-          Successfully cofounded a <a href="https://tyro-app.com" className="underline">startup</a>,
+          Successfully cofounded a <a href="https://tyro-app.com" className="underline">startup</a> in Egypt,
           Bsc. in Computer Science,
           Love the challenge of developing technical solutions within business constraints that help real users.
         </StyledDescription>
@@ -95,7 +95,7 @@ export default () => {
 
 
       </div>
-      <div className="right w-1/2">
+      <div className="right w-2/5">
         <GithubLastCommit/>
       </div>
     </div>
