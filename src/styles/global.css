@@ -6,3 +6,18 @@ html, body{
     width: 100%;
     min-height: 100%;
 }
+
+.avatar-spin, .avatar-spin-reverse{
+    animation: spin 80s linear infinite;
+}
+.avatar-spin-reverse{
+    animation-direction: reverse;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
