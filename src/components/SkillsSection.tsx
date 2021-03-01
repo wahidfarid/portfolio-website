@@ -29,7 +29,7 @@ const StyledSkill = tw.span`
   py-2
   rounded-full
   ${p => "bg-"+p.color+"-600"}
-  ${p => p.great ? '' : 'bg-opacity-50'}
+  ${p => ( p.great ? '' : 'bg-opacity-50' )}
 `
 
 const SkillsSection = () => (
@@ -42,36 +42,36 @@ const SkillsSection = () => (
       <div id="frontend" className="sm:w-full lg:w-1/2 lg:border-r-4 border-dashed border-gray-800">
         <StyledCategoryTitle>Frontend</StyledCategoryTitle>
         <div className="flex flex-wrap justify-center pb-8">
-          {skills.frontend.great.map(skill => <StyledSkill key={skill} color="yellow" great={true}>{skill}</StyledSkill>)}
-          {skills.frontend.average.map(skill => <StyledSkill key={skill} color="yellow" great={false}>{skill}</StyledSkill>)}
+          {skills.frontend.great.map(skill => <StyledSkill key={skill} color="yellow" great={+true}>{skill}</StyledSkill>)}
+          {skills.frontend.average.map(skill => <StyledSkill key={skill} color="yellow" great={+false}>{skill}</StyledSkill>)}
         </div>
       </div>
       <div id="backend" className="sm:w-full lg:w-1/2">
         <StyledCategoryTitle>Backend</StyledCategoryTitle>
         <div className="flex flex-wrap justify-center pb-8">
-          {skills.backend.great.map(skill => <StyledSkill key={skill} color="blue" great={true}>{skill}</StyledSkill>)}
-          {skills.backend.average.map(skill => <StyledSkill key={skill} color="blue" great={false}>{skill}</StyledSkill>)}
+          {skills.backend.great.map(skill => <StyledSkill key={skill} color="blue" great={+true}>{skill}</StyledSkill>)}
+          {skills.backend.average.map(skill => <StyledSkill key={skill} color="blue" great={+false}>{skill}</StyledSkill>)}
         </div>
       </div>
       <div id="inbetween" className="sm:w-full lg:w-1/2 lg:border-r-4 border-dashed border-gray-800 ">
         <StyledCategoryTitle>Inbetween</StyledCategoryTitle>
         <div className="flex flex-wrap justify-center pb-8">
-          {skills.inbetween.great.map(skill => <StyledSkill key={skill} color="purple" great={true}>{skill}</StyledSkill>)}
-          {skills.inbetween.average.map(skill => <StyledSkill key={skill} color="purple" great={false}>{skill}</StyledSkill>)}
+          {skills.inbetween.great.map(skill => <StyledSkill key={skill} color="purple" great={+true}>{skill}</StyledSkill>)}
+          {skills.inbetween.average.map(skill => <StyledSkill key={skill} color="purple" great={+false}>{skill}</StyledSkill>)}
         </div>
       </div>
       <div id="devops" className="sm:w-full lg:w-1/2">
         <StyledCategoryTitle>Devops / Architecture</StyledCategoryTitle>
         <div className="flex flex-wrap justify-center pb-8">
-          {skills.devops.great.map(skill => <StyledSkill key={skill} color="red" great={true}>{skill}</StyledSkill>)}
-          {skills.devops.average.map(skill => <StyledSkill key={skill} color="red" great={false}>{skill}</StyledSkill>)}
+          {skills.devops.great.map(skill => <StyledSkill key={skill} color="red" great={+true}>{skill}</StyledSkill>)}
+          {skills.devops.average.map(skill => <StyledSkill key={skill} color="red" great={+false}>{skill}</StyledSkill>)}
         </div>
       </div>
       <div id="other" className="sm:w-full lg:w-1/2">
         <StyledCategoryTitle>Other</StyledCategoryTitle>
         <div className="flex flex-wrap justify-center pb-8">
-          {skills.other.great.map(skill => <StyledSkill key={skill} color="pink" great={true}>{skill}</StyledSkill>)}
-          {skills.other.average.map(skill => <StyledSkill key={skill} color="pink" great={false}>{skill}</StyledSkill>)}
+          {skills.other.great.map(skill => <StyledSkill key={skill} color="pink" great={+true}>{skill}</StyledSkill>)}
+          {skills.other.average.map(skill => <StyledSkill key={skill} color="pink" great={+false}>{skill}</StyledSkill>)}
         </div>
       </div>
 
