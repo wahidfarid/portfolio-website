@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import tw from "tailwind-styled-components"
 
+import '../styles/global.css';
 import SEO from "./seo"
 
 const StyledLayout = tw.div`
