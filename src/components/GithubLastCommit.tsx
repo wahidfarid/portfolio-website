@@ -48,14 +48,6 @@ const StyledCommitContainer = tw.a`
     relative
     z-10
 `
-
-const StyledArrow = tw(Img)`
-    w-28
-    -left-28
-    -top-4
-    bottom-2
-`
-
 interface commit {
     commit: any,
     repo: any,
@@ -115,7 +107,16 @@ const GithubLastCommit = () => {
 
         <StyledCommitContainer href={commitData.html_url} target="_blank">
             <div className="flex flex-col mb-2">
-                <StyledArrow fluid={data.arrow.childImageSharp.fluid} alt="arrow" style={{position: "absolute"}}/>
+                <Img 
+                    fluid={data.arrow.childImageSharp.fluid} 
+                    alt="arrow" 
+                    style={{
+                        position: "absolute",
+                        width: "100px",
+                        left: "-100px",
+                        top: "-18px"
+                    }}
+                />
                 <span className="text-xl font-semibold">
                     <span className="text-gray-400">Commit:</span> {commitData.commit?.message.split("\n")[0]}
                 </span>
