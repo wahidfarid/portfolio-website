@@ -26,6 +26,7 @@ const StyledRepoContainer = tw.a`
     divide-dashed
     divide-gray-400
     max-w-md
+    w-full
 `
 
 const StyledCommitContainer = tw.a`
@@ -45,6 +46,7 @@ const StyledCommitContainer = tw.a`
     divide-dashed
     divide-gray-400
     max-w-md
+    w-full
     relative
     z-10
 `
@@ -110,6 +112,7 @@ const GithubLastCommit = () => {
                 <Img 
                     fluid={data.arrow.childImageSharp.fluid} 
                     alt="arrow" 
+                    className="hidden md:block"
                     style={{
                         position: "absolute",
                         width: "100px",

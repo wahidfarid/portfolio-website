@@ -61,7 +61,7 @@ const SkillsSection = () => (
         </div>
       </div>
       <div id="devops" className="sm:w-full lg:w-1/2">
-        <StyledCategoryTitle>Devops/Architecture</StyledCategoryTitle>
+        <StyledCategoryTitle>Devops / Architecture</StyledCategoryTitle>
         <div className="flex flex-wrap justify-center pb-8">
           {skills.devops.great.map(skill => <StyledSkill key={skill} color="red" great={true}>{skill}</StyledSkill>)}
           {skills.devops.average.map(skill => <StyledSkill key={skill} color="red" great={false}>{skill}</StyledSkill>)}

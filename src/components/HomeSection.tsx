@@ -69,8 +69,8 @@ const HomeSection = () => {
     }
     `);
 
-    return <div className="container mx-auto flex pt-40 pb-16">
-      <div className="left w-3/5 flex flex-col justify-end items-start">
+    return <div className="container mx-auto flex flex-wrap pt-12 lg:pt-40 pb-16 px-2">
+      <div className="left w-full lg:w-3/5 flex flex-col justify-end items-center md:items-start">
         
         <StyledAvatarWrapper style={{maxWidth: 250}}>
           <StyledAvatar
@@ -92,7 +92,7 @@ const HomeSection = () => {
         <StyledGetInTouchButton href="mailto:wahidfarid@hey.com" target="_blank">Get in Touch</StyledGetInTouchButton>
 
       </div>
-      <div className="right w-2/5">
+      <div className="right w-full lg:w-2/5 my-12 lg:my-0">
         <GithubLastCommit/>
       </div>
     </div>
