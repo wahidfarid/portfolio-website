@@ -1,4 +1,5 @@
-// api.github.com/users/:user/repos
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import React, { useEffect, useState } from 'react'
 import Moment from 'react-moment'
 import tw from 'tailwind-styled-components'
@@ -44,6 +45,15 @@ const StyledCommitContainer = tw.a`
     divide-dashed
     divide-gray-400
     max-w-md
+    relative
+    z-10
+`
+
+const StyledArrow = tw(Img)`
+    w-28
+    -left-28
+    -top-4
+    bottom-2
 `
 
 interface commit {
@@ -53,6 +63,18 @@ interface commit {
 }
 
 const GithubLastCommit = () => {
+
+    const data = useStaticQuery(graphql`
+    query {
+      arrow: file(relativePath: { eq: "arrow.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 320) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    `);
 
     let getDataFromGithubAPI = () => {
         // get all user repos from GitHub api
@@ -79,8 +101,8 @@ const GithubLastCommit = () => {
       getDataFromGithubAPI()
     }, [])
 
-    return <div className="flex flex-col items-start justify-center">
-        <StyledH2>Latest public commit</StyledH2>
+    return <div className="flex flex-col items-start justify-center relative">
+        <StyledH2>What i'm working on</StyledH2>
         <StyledRepoContainer href={commitData.repo?.html_url} target="_blank">
             <div className="flex flex-col mb-2">
                 <span className="text-xl font-semibold"><span className="text-gray-400">Repo:</span> {commitData.repo?.name} </span>
@@ -90,8 +112,10 @@ const GithubLastCommit = () => {
                 {commitData.repo?.description}
             </p>
         </StyledRepoContainer>
+
         <StyledCommitContainer href={commitData.html_url} target="_blank">
-        <div className="flex flex-col mb-2">
+            <div className="flex flex-col mb-2">
+                <StyledArrow fluid={data.arrow.childImageSharp.fluid} alt="arrow" style={{position: "absolute"}}/>
                 <span className="text-xl font-semibold">
                     <span className="text-gray-400">Commit:</span> {commitData.commit?.message.split("\n")[0]}
                 </span>

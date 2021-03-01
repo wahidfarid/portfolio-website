@@ -2,8 +2,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import tw from 'tailwind-styled-components'
-import GithubLastCommit from "../components/GithubLastCommit"
 
+import GithubLastCommit from "../components/GithubLastCommit"
 import Layout from "../components/layout"
 
 const StyledAvatarWrapper = tw.div`
