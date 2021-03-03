@@ -63,7 +63,7 @@ const PortfolioSection = () => {
     }
   `);
 
-  return <div className="py-16 w-full container mx-auto flex flex-col text-gray-200">
+  return <div className="pt-16 pb-4 w-full container mx-auto flex flex-col text-gray-200">
     <StyledSectionTitle>What i've done</StyledSectionTitle>
     <div className="divide-y-2 divide-gray-400 divide-dashed">
       <StyledProject>

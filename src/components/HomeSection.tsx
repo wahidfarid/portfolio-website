@@ -4,6 +4,7 @@ import React from "react"
 import tw from 'tailwind-styled-components'
 
 import GithubLastCommit from "../components/GithubLastCommit"
+import CTAButton from "./CTAButton"
 
 
 const StyledAvatarWrapper = tw.div`
@@ -42,20 +43,6 @@ const StyledDescription = tw.p`
   text-gray-200
 `
 
-const StyledGetInTouchButton = tw.a`
-  bg-gray-600
-  hover:bg-gray-500
-  rounded
-  py-2
-  px-4
-  mt-5
-  text-lg
-  font-medium
-  cursor-pointer
-  float-left
-  inline-block
-`
-
 const HomeSection = () => {
     const data = useStaticQuery(graphql`
     query {
@@ -89,7 +76,7 @@ const HomeSection = () => {
           Love the challenge of developing technical solutions within business constraints that help real users.
         </StyledDescription>
 
-        <StyledGetInTouchButton href="mailto:wahidfarid@hey.com" target="_blank">Get in Touch</StyledGetInTouchButton>
+        <CTAButton/>
 
       </div>
       <div className="right w-full lg:w-2/5 my-12 lg:my-0">

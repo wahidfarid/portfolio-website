@@ -19,10 +19,8 @@ const Layout = ({ children }) => {
     <StyledLayout>
       <SEO title="Home" />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <footer className="bg-gray-900 text-center">
+        © {new Date().getFullYear()}, Built with ❤️, Powered by 🍟
       </footer>
     </StyledLayout>
   )
