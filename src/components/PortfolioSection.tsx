@@ -69,6 +69,7 @@ const PortfolioSection = () => {
       <StyledProject>
         <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Tyro-app</StyledProjectTitle>
+          <span className="text-lg">2016</span>
           <Img fluid={data.tyroLaptop.childImageSharp.fluid} alt="Laptop image of Tyro-app.com"/>
           <Img 
           fluid={data.tyroPhone.childImageSharp.fluid}
@@ -98,6 +99,7 @@ const PortfolioSection = () => {
         </StyledDescription>
         <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Hanakol-eh</StyledProjectTitle>
+          <span className="text-lg">2021</span>
           <Img fluid={data.hanakolTablet.childImageSharp.fluid} alt="Tablet image of Hanakol-eh.com" className="w-2/3 mx-auto"/>
         </div>
       </StyledProject>
