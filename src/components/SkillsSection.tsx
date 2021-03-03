@@ -28,7 +28,20 @@ const StyledSkill = tw.span`
   px-4
   py-2
   rounded-full
-  ${p => "bg-"+p.color+"-600"}
+  ${p => {
+    switch(p.color){
+      case "yellow":
+        return "bg-yellow-600";
+      case "blue":
+        return "bg-blue-600";
+      case "purple":
+        return "bg-purple-600";
+      case "red":
+        return "bg-red-600";
+      case "pink":
+        return "bg-pink-600";
+    }
+  }}
   ${p => ( p.great ? '' : 'bg-opacity-50' )}
 `
 
