@@ -10,7 +10,6 @@ const StyledSectionTitle = tw.h1`
   border-b-4
   border-gray-400
   pb-2
-  mb-16
   mx-auto
 `
 
@@ -30,7 +29,7 @@ const StyledDescription = tw.p`
   w-full
   lg:w-1/2
   p-6
-  pt-20
+  lg:pt-32
   text-md
   text-left
   whitespace-pre-line
@@ -63,9 +62,10 @@ const PortfolioSection = () => {
     }
   `);
 
-  return <div className="pt-16 pb-4 w-full container mx-auto flex flex-col text-gray-200">
+  return <div className="bg-gray-900 pt-16 pb-4 w-full text-gray-200">
+    <div className="container mx-auto flex flex-col">
     <StyledSectionTitle>What i've done</StyledSectionTitle>
-    <div className="divide-y-2 divide-gray-400 divide-dashed">
+    <div className="divide-y-2 divide-gray-600 divide-dashed">
       <StyledProject>
         <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Tyro-app</StyledProjectTitle>
@@ -74,8 +74,8 @@ const PortfolioSection = () => {
           <Img 
           fluid={data.tyroPhone.childImageSharp.fluid}
           alt="Phone image of Tyro-app.com"
-          style={{position: "absolute", width: 150}}
-          className="right-0 top-24 hidden xl:block"
+          style={{position: "absolute", width: 120}}
+          className="right-8 top-44 hidden xl:block"
           />        
         </div>
         <StyledDescription>
@@ -104,6 +104,7 @@ const PortfolioSection = () => {
         </div>
       </StyledProject>
     </div>
+  </div>
   </div>
 }
 

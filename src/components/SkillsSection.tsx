@@ -33,9 +33,9 @@ const StyledSkill = tw.span`
 `
 
 const SkillsSection = () => (
-<div className="bg-gray-900 py-16 w-full">
+<div className="bg-gray-800 pt-16 pb-4 w-full">
   <div className="container mx-auto flex flex-col text-gray-200">
-    <StyledSectionTitle>What i can do for you</StyledSectionTitle>
+    <StyledSectionTitle>How i do it</StyledSectionTitle>
 
     <div className="flex flex-wrap justify-center sm:divide-y-4 lg:divide-y-0 divide-dashed divide-gray-800 my-8">
 

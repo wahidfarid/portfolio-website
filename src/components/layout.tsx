@@ -19,8 +19,8 @@ const Layout = ({ children }) => {
     <StyledLayout>
       <SEO title="Home" />
       <main>{children}</main>
-      <footer className="bg-gray-900 text-center">
-        © {new Date().getFullYear()}, Built with ❤️, Powered by 🍟
+      <footer className="bg-gray-900 text-center pb-4">
+        © {new Date().getFullYear()}, Built with ❤️, Located in 🇪🇬, Powered by 🍟
       </footer>
     </StyledLayout>
   )
