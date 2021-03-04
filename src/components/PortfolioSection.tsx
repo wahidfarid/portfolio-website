@@ -64,7 +64,7 @@ const PortfolioSection = () => {
 
   return <div className="bg-gray-900 pt-16 pb-4 w-full text-gray-200">
     <div className="container mx-auto flex flex-col">
-    <StyledSectionTitle>What i've done</StyledSectionTitle>
+    <StyledSectionTitle>What I've done</StyledSectionTitle>
     <div className="divide-y-2 divide-gray-600 divide-dashed">
       <StyledProject>
         <div className="w-full lg:w-1/2 p-6 relative">
@@ -79,7 +79,7 @@ const PortfolioSection = () => {
           />        
         </div>
         <StyledDescription>
-          <a href="https://tyro-app.com" className="underline">Tyro-app</a> is an online e-learning startup based in Egypt that i co-founded with friends in the last year of university.
+          <a href="https://tyro-app.com" className="underline">Tyro-app</a> is an online e-learning startup based in Egypt that I co-founded with friends in the last year of university.
           <br/><br/>
           It's a platform that connects people who want to learn something with tutors who can teach them that thing (be it languages, arts, etc...). Essentially it's a crowd-sourced tutoring service.
           <br/><br/>

@@ -96,7 +96,7 @@ const GithubLastCommit = () => {
     }, [])
 
     return <div className="flex flex-col items-start justify-center relative">
-        <StyledH2>What i'm working on</StyledH2>
+        <StyledH2>What I'm working on</StyledH2>
         <StyledRepoContainer href={commitData.repo?.html_url} target="_blank">
             <div className="flex flex-col mb-2">
                 <span className="text-xl font-semibold"><span className="text-gray-400">Repo:</span> {commitData.repo?.name} </span>

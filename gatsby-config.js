@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Wahid M. Farid`,
-    description: `Full-stack developer based in Egypt. Get in touch to see how i can help you achieve your goals`,
+    description: `Full-stack developer based in Egypt. Get in touch to see how I can help you achieve your goals`,
     author: `Wahid Farid`,
   },
   plugins: [
