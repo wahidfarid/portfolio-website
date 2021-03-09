@@ -24,6 +24,7 @@ export default {
       'Gulp',
       'Webpack',
       'Jest',
+      'Redux',
       'SSR',
     ]
   },

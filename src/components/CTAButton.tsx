@@ -19,7 +19,7 @@ type CTAProps ={
   text?: string
 }
 const CTAButton = (props: CTAProps) => (
-  <StyledGetInTouchButton href="mailto:wahidfarid@hey.com" target="_blank">{props.text || "Get in touch"}</StyledGetInTouchButton>
+  <StyledGetInTouchButton href="mailto:hello@wahidfarid.dev" target="_blank">{props.text || "Get in touch"}</StyledGetInTouchButton>
 )
 
 export default CTAButton;
