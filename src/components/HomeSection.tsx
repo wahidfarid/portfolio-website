@@ -64,7 +64,7 @@ const HomeSection = () => {
       if(!isPixelBannerInitialized && PixelBannerDiv.current){
         new PixelBanner({
           target: "#pixel_banner_div",
-          opacity: "0.3",
+          opacity: "0.2",
           pixel_options:{
               probability:{
                 y_axis: "distance"
