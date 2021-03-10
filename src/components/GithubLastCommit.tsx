@@ -95,7 +95,7 @@ const GithubLastCommit = () => {
       getDataFromGithubAPI()
     }, [])
 
-    return <div className="flex flex-col items-start justify-center relative">
+    return <div className={`flex flex-col items-start justify-center relative opacity-0 ${commitData.repo ? "transition-all ease-in-out duration-500 opacity-100" : ""}`}>
         <StyledH2>What I'm working on</StyledH2>
         <StyledRepoContainer href={commitData.repo?.html_url} target="_blank">
             <div className="flex flex-col mb-2">
