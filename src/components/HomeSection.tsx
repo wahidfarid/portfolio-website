@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import React from "react"
+import React, { Ref, useEffect, useRef } from "react"
 import tw from 'tailwind-styled-components'
+import PixelBanner from 'pixel-banner'
 
 import GithubLastCommit from "../components/GithubLastCommit"
 import CTAButton from "./CTAButton"
@@ -56,31 +57,51 @@ const HomeSection = () => {
     }
     `);
 
-    return <div className="container mx-auto flex flex-wrap pt-12 lg:pt-40 pb-16 px-2">
-      <div className="left w-full lg:w-3/5 flex flex-col justify-end items-center md:items-start">
-        
-        <StyledAvatarWrapper style={{maxWidth: 250}}>
-          <StyledAvatar
-          fluid={data.fileName.childImageSharp.fluid} 
-          alt="Picture of wahid"/>
-        </StyledAvatarWrapper>
-        
-        <StyledName>Wahid M. Farid</StyledName>
+    let isPixelBannerInitialized = false;
+    let PixelBannerDiv = useRef(null);
 
-        <StyledJobTitle>Full-stack web developer</StyledJobTitle>
+    useEffect(()=>{
+      if(!isPixelBannerInitialized && PixelBannerDiv.current){
+        new PixelBanner({
+          target: "#pixel_banner_div",
+          opacity: "0.3",
+          pixel_options:{
+              probability:{
+                y_axis: "distance"
+              }
+          }
+        }, PixelBannerDiv.current);
+        isPixelBannerInitialized = true;
+      }
+    });
 
-        <StyledDescription>
-          6 years of experience across multiple frameworks,
-          Successfully cofounded a <a href="https://tyro-app.com" className="underline">startup</a> in Egypt,
-          Bsc. in Computer Science,
-          Love the challenge of developing technical solutions within business constraints that help real users.
-        </StyledDescription>
+    return <div ref={PixelBannerDiv}>
+      <div className="container mx-auto flex flex-wrap pt-12 lg:pt-40 pb-16 px-2">
+        <div className="left w-full lg:w-3/5 flex flex-col justify-end items-center md:items-start z-10">
+          
+          <StyledAvatarWrapper style={{maxWidth: 250}}>
+            <StyledAvatar
+            fluid={data.fileName.childImageSharp.fluid} 
+            alt="Picture of wahid"/>
+          </StyledAvatarWrapper>
+          
+          <StyledName>Wahid M. Farid</StyledName>
 
-        <CTAButton/>
+          <StyledJobTitle>Full-stack web developer</StyledJobTitle>
 
-      </div>
-      <div className="right w-full lg:w-2/5 my-12 lg:my-0">
-        <GithubLastCommit/>
+          <StyledDescription>
+            6 years of experience across multiple frameworks,
+            Successfully cofounded a <a href="https://tyro-app.com" className="underline">startup</a> in Egypt,
+            Bsc. in Computer Science,
+            Love the challenge of developing technical solutions within business constraints that help real users.
+          </StyledDescription>
+
+          <CTAButton/>
+
+        </div>
+        <div className="right w-full lg:w-2/5 my-12 lg:my-0 z-10">
+          <GithubLastCommit/>
+        </div>
       </div>
     </div>
 }
