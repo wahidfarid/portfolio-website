@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     <StyledLayout>
       <SEO title="Home" />
       <main>{children}</main>
-      <footer className="bg-gray-900 text-center pb-4">
+      <footer className="bg-gray-900 text-center pb-4 text-sm lg:text-md">
         © {new Date().getFullYear()}, Built with ❤️, Located in 🇪🇬, Powered by 🍟
       </footer>
     </StyledLayout>
