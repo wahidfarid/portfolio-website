@@ -19,13 +19,15 @@ export default {
       'SASS',
     ],
     average: [
-      'Iconic',
+      'Ionic',
       'Canvas',
       'Gulp',
       'Webpack',
       'Jest',
       'Redux',
       'SSR',
+      'XState',
+      'Storybook'
     ]
   },
   backend:{
