@@ -59,6 +59,13 @@ const PortfolioSection = () => {
           }
         }
       },
+      toyotaDesktop:file(relativePath: { eq: "toyota.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `);
 
@@ -66,6 +73,7 @@ const PortfolioSection = () => {
     <div className="container mx-auto flex flex-col">
     <StyledSectionTitle>What I've done</StyledSectionTitle>
     <div className="divide-y-2 divide-gray-600 divide-dashed">
+
       <StyledProject>
         <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Tyro-app</StyledProjectTitle>
@@ -91,17 +99,33 @@ const PortfolioSection = () => {
 
       <StyledProject reverse={+true}>
         <StyledDescription>
+          <a href="http://toyotaelobour.com/" className="underline">Toyota el-Obour</a> is a freelance project for UMC, a Toyota dealership based in el-obour in cairo.
+          <br/><br/>
+          It's a Bi-lingual Wordpress website, made with Elementor, WPML, Advanced Custom Fields, Gravity forms and more tools. Design based on the international Toyota brand identity. The website was tailored to display all of the cars, models and services offered by UMC. This includes promotional material about all of the cars, information about all of the variations of the models of each car, a comparison tool to help clients to identify the ideal car for them, a maintenance scheduling form, a careers section, etc...
+          <br/><br/>
+          A notable achievement in this project was creating a completely custom wordpress plugin to display a 360 view of all of the cars on the website. While working with the client to bring their vision to life, i wasn't able to find an ideal already-existing solution for this component and so i've created the ideal solution myself. See it in action <a href="http://toyotaelobour.com/car/2021-corolla/" className="underline">here</a>
+
+        </StyledDescription>
+        <div className="w-full lg:w-1/2 p-6 relative">
+          <StyledProjectTitle>Toyota el-Obour</StyledProjectTitle>
+          <span className="text-lg">2021</span>
+          <Img fluid={data.toyotaDesktop.childImageSharp.fluid} alt="Desktop image of toyotaelobour.com" className="w-2/3 mx-auto"/>
+        </div>
+      </StyledProject>
+      
+      <StyledProject>
+      <div className="w-full lg:w-1/2 p-6 relative">
+          <StyledProjectTitle>Hanakol-eh</StyledProjectTitle>
+          <span className="text-lg">2021</span>
+          <Img fluid={data.hanakolTablet.childImageSharp.fluid} alt="Tablet image of Hanakol-eh.com" className="w-2/3 mx-auto"/>
+        </div>
+        <StyledDescription>
           <a href="https://hanakol-eh.vercel.app/" className="underline">Hanakol-eh</a> literally means "What will we eat" in arabic. It's a small personal project built to help with the indecision of not knowing what food to order.
           <br/><br/>
           Though currently a WIP MVC, it's a simple React/NextJS SPA that displays aggregated data of many food delivery apps in the Egyptian market. The data is aggregated through a serverless function that requests APIs and crawls pages to find restaurants that deliver to the user's current location, then sort and filter them by deals and availability. The user can then know what the best deals are at a glance.
           <br/><br/>
           Open-source repo <a href="https://github.com/wahidmagdy/hanakol-eh" className="underline">here</a>. a lot of new features planned to be implemented over time, such as displaying deal information outside of food delivery apps, and caching the results geographically so not all users would have to wait as long to scrape all of the needed information.
         </StyledDescription>
-        <div className="w-full lg:w-1/2 p-6 relative">
-          <StyledProjectTitle>Hanakol-eh</StyledProjectTitle>
-          <span className="text-lg">2021</span>
-          <Img fluid={data.hanakolTablet.childImageSharp.fluid} alt="Tablet image of Hanakol-eh.com" className="w-2/3 mx-auto"/>
-        </div>
       </StyledProject>
     </div>
   </div>
