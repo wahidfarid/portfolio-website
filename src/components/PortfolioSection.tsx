@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import tw from 'tailwind-styled-components'
 
 const StyledSectionTitle = tw.h1`
@@ -40,30 +40,22 @@ const PortfolioSection = () => {
     query {
       tyroLaptop: file(relativePath: { eq: "tyro-laptop.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 1200, layout: CONSTRAINED, quality: 85)
         }
       },
       tyroPhone:file(relativePath: { eq: "tyro-phone.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 500, layout: CONSTRAINED, quality: 85)
         }
       },
       hanakolTablet:file(relativePath: { eq: "hanakoleh-tablet.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 1200, layout: CONSTRAINED, quality: 85)
         }
       },
       toyotaDesktop:file(relativePath: { eq: "toyota.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 1200, layout: CONSTRAINED, quality: 85)
         }
       },
     }
@@ -78,9 +70,9 @@ const PortfolioSection = () => {
         <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Tyro-app</StyledProjectTitle>
           <span className="text-lg">2016</span>
-          <Img fluid={data.tyroLaptop.childImageSharp.fluid} alt="Laptop image of Tyro-app.com"/>
-          <Img 
-          fluid={data.tyroPhone.childImageSharp.fluid}
+          <GatsbyImage image={getImage(data.tyroLaptop)!} alt="Laptop image of Tyro-app.com"/>
+          <GatsbyImage
+          image={getImage(data.tyroPhone)!}
           alt="Phone image of Tyro-app.com"
           style={{position: "absolute", width: 120}}
           className="right-8 top-44 hidden xl:block"
@@ -109,7 +101,7 @@ const PortfolioSection = () => {
         <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Toyota el-Obour</StyledProjectTitle>
           <span className="text-lg">2021</span>
-          <Img fluid={data.toyotaDesktop.childImageSharp.fluid} alt="Desktop image of toyotaelobour.com" className="w-2/3 mx-auto"/>
+          <GatsbyImage image={getImage(data.toyotaDesktop)!} alt="Desktop image of toyotaelobour.com" className="w-2/3 mx-auto"/>
         </div>
       </StyledProject>
       
@@ -117,7 +109,7 @@ const PortfolioSection = () => {
       <div className="w-full lg:w-1/2 p-6 relative">
           <StyledProjectTitle>Hanakol-eh</StyledProjectTitle>
           <span className="text-lg">2021</span>
-          <Img fluid={data.hanakolTablet.childImageSharp.fluid} alt="Tablet image of Hanakol-eh.com" className="w-2/3 mx-auto"/>
+          <GatsbyImage image={getImage(data.hanakolTablet)!} alt="Tablet image of Hanakol-eh.com" className="w-2/3 mx-auto"/>
         </div>
         <StyledDescription>
           <a href="https://hanakol-eh.vercel.app/" className="underline">Hanakol-eh</a> literally means "What will we eat" in arabic. It's a small personal project built to help with the indecision of not knowing what food to order.

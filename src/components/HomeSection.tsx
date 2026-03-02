@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React, { Ref, useEffect, useRef } from "react"
 import tw from 'tailwind-styled-components'
 import PixelBanner from 'pixel-banner'
@@ -15,7 +15,7 @@ const StyledAvatarWrapper = tw.div`
   rounded-full
   avatar-spin
   `
-const StyledAvatar = tw(Img)`
+const StyledAvatar = tw(GatsbyImage)`
   max-w-xs
   w-52
   m-3
@@ -49,9 +49,7 @@ const HomeSection = () => {
     query {
       fileName: file(relativePath: { eq: "wahid.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 320, maxHeight: 320) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 500, layout: CONSTRAINED, quality: 85)
         }
       }
     }
@@ -59,6 +57,8 @@ const HomeSection = () => {
 
     let isPixelBannerInitialized = false;
     let PixelBannerDiv = useRef(null);
+
+    const yearsOfExperience = (new Date).getFullYear() - 2014;
 
     useEffect(()=>{
       if(!isPixelBannerInitialized && PixelBannerDiv.current){
@@ -81,7 +81,7 @@ const HomeSection = () => {
           
           <StyledAvatarWrapper style={{maxWidth: 250}}>
             <StyledAvatar
-            fluid={data.fileName.childImageSharp.fluid} 
+            image={getImage(data.fileName)!}
             alt="Picture of wahid"/>
           </StyledAvatarWrapper>
           
@@ -90,8 +90,8 @@ const HomeSection = () => {
           <StyledJobTitle>Full-stack web developer</StyledJobTitle>
 
           <StyledDescription>
-            6 years of experience across multiple frameworks,
-            Successfully cofounded a <a href="https://tyro-app.com" className="underline">startup</a> in Egypt,
+            {yearsOfExperience} years of experience across multiple frameworks,
+            Successfully cofounded a <a href="https://nafhambytyro.com/" className="underline">startup</a> in Egypt,
             Bsc. in Computer Science,
             Love the challenge of developing technical solutions within business constraints that help real users.
           </StyledDescription>
@@ -100,7 +100,7 @@ const HomeSection = () => {
 
         </div>
         <div className="right w-full lg:w-2/5 my-12 lg:my-0 z-10">
-          <GithubLastCommit/>
+          {/* <GithubLastCommit/> */}
         </div>
       </div>
     </div>

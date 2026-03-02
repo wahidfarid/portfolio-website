@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
 import Moment from 'react-moment'
 import tw from 'tailwind-styled-components'
@@ -62,9 +62,7 @@ const GithubLastCommit = () => {
     query {
       arrow: file(relativePath: { eq: "arrow.png" }) {
         childImageSharp {
-          fluid(maxWidth: 320) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 200, layout: FIXED, quality: 85)
         }
       }
     }
@@ -76,6 +74,7 @@ const GithubLastCommit = () => {
       .then(response => response.json())
       .then(resultData => {
           // get the latest one
+          console.log({resultData});
           let repoData = resultData.reduce((latestRepo, repo)=>{
               return new Date(latestRepo.pushed_at) > new Date(repo.pushed_at) ? latestRepo : repo
           });
@@ -109,9 +108,9 @@ const GithubLastCommit = () => {
 
         <StyledCommitContainer href={commitData.html_url} target="_blank">
             <div className="flex flex-col mb-2">
-                <Img 
-                    fluid={data.arrow.childImageSharp.fluid} 
-                    alt="arrow" 
+                <GatsbyImage
+                    image={getImage(data.arrow)!}
+                    alt="arrow"
                     className="hidden md:block"
                     style={{
                         position: "absolute",
