@@ -1,33 +1,35 @@
 export default {
   frontend: {
     great: [
-      'AngularIo',
-      'ReactJS',
-      'AngularJS',
+      'Typescript',
+      'React',
+      'Redux',
+      'XState',
       'Responsive',
       'SPA',
-      'Typescript',
+      'SSR',
+      'SSG',
       'Create-react-app',
       'NextJS',
-      'Gatsby',
       'React Native',
+      'ES6',
       'HTML5',
       'CSS3',
       'Design to Code',
       'Bootstrap',
       'TailwindCSS',
       'SASS',
+      'Angular',
     ],
     average: [
-      'Ionic',
-      'Canvas',
+      'HTML Canvas',
+      'Gatsby',
       'Gulp',
+      'Vite',
       'Webpack',
       'Jest',
-      'Redux',
-      'SSR',
-      'XState',
-      'Storybook'
+      'Storybook',
+      'Ionic',
     ]
   },
   backend:{
@@ -37,10 +39,12 @@ export default {
       'Ruby',
       'MVC',
       'Mysql',
+      'Postgres',
       'MongoDB',
       'Firebase',
       'GraphQL',
       'OAuth',
+      'SSO',
       'HLD with design patterns',
       'Microservices',
       'Monolithic',
@@ -49,6 +53,7 @@ export default {
       'Laravel',
       'Postgres',
       'Python',
+      'Elixir',
       'PHP',
       'ElasticSearch',
       'rspec',
@@ -56,24 +61,32 @@ export default {
   },
   inbetween:{
     great: [
+      'AI Workflows',
+      'TDD',
+      'Test Code Coverage',
       'I18n',
       'LTR-RTL layout changes',
+      'Payment Integrations',
       'WebRTC',
       'Websockets',
       'Video Conferencing',
+      'Lokalize',
       'Search Engine Optimization',
       'Wordpress',
       'Gitflow',
-      'Landing Pages',
-      'API Integrations'
+      'Git-Worktrees',
+      'Marketing Funnels and Landing Pages',
+      'API Integrations',
+      'Analytics',
+      'Bug Tracking and Observability',
     ],
     average: [
-      'Analytics',
-      'E2E Tests',
+      'Codemods'
     ]
   },
   devops:{
     great: [
+      'CI/CD Pipelines',
       'Linux Administration',
       'Cron',
       'NGINX',
@@ -82,17 +95,20 @@ export default {
       'AWS',
       'Digital Ocean',
       'Cloudflare',
+      'Vercel',
       'DNS',
-      'CI/CD Pipelines',
+      'Domain and Email management'
     ],
     average: [
       'Google Cloud Platform',
       'Sentry',
+      'BugSnag',
       'Serverless Functions',
     ]
   },
   other: {
     great: [
+      'Figma',
       'Flexible',
       'Analytical',
       'Wireframing',
@@ -107,7 +123,8 @@ export default {
       'Agile',
       'Kanban',
       'Jira',
-      'Basecamp'
+      'Basecamp',
+      'ShapeUp'
     ]
   }
 }
