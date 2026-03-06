@@ -5,14 +5,15 @@ const StyledGetInTouchButton = tw.a`
   bg-gray-600
   hover:bg-gray-500
   rounded
-  py-2
-  px-4
+  py-3
+  px-8
   mt-5
   text-lg
   font-medium
   cursor-pointer
-  float-left
   inline-block
+  transition-colors
+  duration-200
 `
 
 type CTAProps ={

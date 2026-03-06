@@ -12,7 +12,7 @@ const StyledSectionTitle = tw.h1`
 `
 
 const ServicesSection = () => (
-  <div className="bg-gray-900 py-16 w-full">
+  <div className="bg-gray-900 py-16 w-full pattern-dots">
   <div className="container mx-auto flex flex-col text-gray-200">
     <StyledSectionTitle>What I can do for you</StyledSectionTitle>
 

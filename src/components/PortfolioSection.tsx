@@ -64,7 +64,7 @@ const PortfolioSection = () => {
     }
   `);
 
-  return <div className="bg-gray-900 pt-16 pb-4 w-full text-gray-200">
+  return <div className="bg-gray-900 pt-16 pb-4 w-full text-gray-200 pattern-stripes">
     <div className="container mx-auto flex flex-col">
     <StyledSectionTitle>What I've done</StyledSectionTitle>
     <div className="divide-y-2 divide-gray-600 divide-dashed">
