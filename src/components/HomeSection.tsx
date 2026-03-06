@@ -90,7 +90,7 @@ const HomeSection = () => {
           <StyledJobTitle>Full-stack web developer</StyledJobTitle>
 
           <StyledDescription>
-            {yearsOfExperience} years of experience across multiple frameworks,
+            {yearsOfExperience} years of experience across multiple frameworks for both B2C and B2B,
             Successfully cofounded a <a href="https://nafhambytyro.com/" className="underline">startup</a> in Egypt,
             Bsc. in Computer Science,
             Love the challenge of developing technical solutions within business constraints that help real users.

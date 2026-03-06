@@ -58,6 +58,9 @@ const PortfolioSection = () => {
           gatsbyImageData(width: 1200, layout: CONSTRAINED, quality: 85)
         }
       },
+      tablecheck:file(relativePath: { eq: "tablecheck.svg" }) {
+        publicURL
+      }
     }
   `);
 
@@ -68,7 +71,31 @@ const PortfolioSection = () => {
 
       <StyledProject>
         <div className="w-full lg:w-1/2 p-6 relative">
-          <StyledProjectTitle>Tyro-app</StyledProjectTitle>
+            <StyledProjectTitle>TableCheck</StyledProjectTitle>
+            <span className="text-lg"> 2021</span>
+            <img src={data.tablecheck.publicURL} alt="Laptop image of TableCheck"/>    
+        </div>
+        <StyledDescription>
+          <a href="https://tablecheck.com/en/join" className="underline">TableCheck</a> is a cohesive B2B platform for managing restaurants and other high end venues' reservations, table seating, reviews, bills, payments, loyalty programs, etc...
+          <br/><br/>
+          During my time with Tablecheck, i've worked on multiple products offered for both B2B and B2C in both an IC and EM capacity to achieve the following milestones:
+          <br/><br/>
+          - Drive a team of 4 engineers to UI/UX rewrite for critical B2B management  software with 10k restaurants and 35k daily active users
+            <br/>
+          - Design and implement a custom solution for publishing articles, press releases, and a B2B marketing funnel with 5K~ organic daily visitors
+            <br/>
+          - Ensuring global language support with 23 languages supported including full RTL/LTR layout shifts
+            <br/>
+          - Integrate Multiple payment gateways serving 45+ countries
+            <br/>
+          - Host an annual Hackathon event to foster connections between IT and non-IT and generate new ideas leading to new production features
+            <br/>
+          - Upgrade tooling and frameworks across the organization (webpack -> vite, Upgrade React, Upgrade EmberJS, Convert JS to Typescript, Optimize CI/CD pipelines) to improve build times by 65~%
+        </StyledDescription>
+      </StyledProject>
+      <StyledProject>
+        <div className="w-full lg:w-1/2 p-6 relative">
+          <StyledProjectTitle>Nafham by Tyro</StyledProjectTitle>
           <span className="text-lg">2016</span>
           <GatsbyImage image={getImage(data.tyroLaptop)!} alt="Laptop image of Tyro-app.com"/>
           <GatsbyImage
@@ -79,7 +106,7 @@ const PortfolioSection = () => {
           />        
         </div>
         <StyledDescription>
-          <a href="https://tyro-app.com" className="underline">Tyro-app</a> is an online e-learning startup based in Egypt that I co-founded with friends in the last year of university.
+          <a href="https://nafhambytyro.com" className="underline">Nafham by Tyro</a> is an online e-learning startup based in Egypt that I co-founded with friends in the last year of university.
           <br/><br/>
           It's a platform that connects people who want to learn something with tutors who can teach them that thing (be it languages, arts, etc...). Essentially it's a crowd-sourced tutoring service.
           <br/><br/>
@@ -89,36 +116,6 @@ const PortfolioSection = () => {
         </StyledDescription>
       </StyledProject>
 
-      <StyledProject reverse={+true}>
-        <StyledDescription>
-          <a href="http://toyotaelobour.com/" className="underline">Toyota el-Obour</a> is a freelance project for UMC, a Toyota dealership based in el-obour in cairo.
-          <br/><br/>
-          It's a Bi-lingual Wordpress website, made with Elementor, WPML, Advanced Custom Fields, Gravity forms and more tools. Design based on the international Toyota brand identity. The website was tailored to display all of the cars, models and services offered by UMC. This includes promotional material about all of the cars, information about all of the variations of the models of each car, a comparison tool to help clients to identify the ideal car for them, a maintenance scheduling form, a careers section, etc...
-          <br/><br/>
-          A notable achievement in this project was creating a completely custom wordpress plugin to display a 360 view of all of the cars on the website. While working with the client to bring their vision to life, i wasn't able to find an ideal already-existing solution for this component and so i've created the ideal solution myself. See it in action <a href="http://toyotaelobour.com/car/2021-corolla/" className="underline">here</a>
-
-        </StyledDescription>
-        <div className="w-full lg:w-1/2 p-6 relative">
-          <StyledProjectTitle>Toyota el-Obour</StyledProjectTitle>
-          <span className="text-lg">2021</span>
-          <GatsbyImage image={getImage(data.toyotaDesktop)!} alt="Desktop image of toyotaelobour.com" className="w-2/3 mx-auto"/>
-        </div>
-      </StyledProject>
-      
-      <StyledProject>
-      <div className="w-full lg:w-1/2 p-6 relative">
-          <StyledProjectTitle>Hanakol-eh</StyledProjectTitle>
-          <span className="text-lg">2021</span>
-          <GatsbyImage image={getImage(data.hanakolTablet)!} alt="Tablet image of Hanakol-eh.com" className="w-2/3 mx-auto"/>
-        </div>
-        <StyledDescription>
-          <a href="https://hanakol-eh.vercel.app/" className="underline">Hanakol-eh</a> literally means "What will we eat" in arabic. It's a small personal project built to help with the indecision of not knowing what food to order.
-          <br/><br/>
-          Though currently a WIP MVC, it's a simple React/NextJS SPA that displays aggregated data of many food delivery apps in the Egyptian market. The data is aggregated through a serverless function that requests APIs and crawls pages to find restaurants that deliver to the user's current location, then sort and filter them by deals and availability. The user can then know what the best deals are at a glance.
-          <br/><br/>
-          Open-source repo <a href="https://github.com/wahidmagdy/hanakol-eh" className="underline">here</a>. a lot of new features planned to be implemented over time, such as displaying deal information outside of food delivery apps, and caching the results geographically so not all users would have to wait as long to scrape all of the needed information.
-        </StyledDescription>
-      </StyledProject>
     </div>
   </div>
   </div>
