@@ -87,7 +87,7 @@ const HomeSection = () => {
           
           <StyledName>Wahid M. Farid</StyledName>
 
-          <StyledJobTitle>Full-stack web developer</StyledJobTitle>
+          <StyledJobTitle>Senior Full-stack Web Developer & EM</StyledJobTitle>
 
           <StyledDescription>
             {yearsOfExperience} years of experience across multiple frameworks for both B2C and B2B,
