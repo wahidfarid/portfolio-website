@@ -98,12 +98,6 @@ const PortfolioSection = () => {
           <StyledProjectTitle>Nafham by Tyro</StyledProjectTitle>
           <span className="text-lg">2016</span>
           <GatsbyImage image={getImage(data.tyroLaptop)!} alt="Laptop image of Tyro-app.com"/>
-          <GatsbyImage
-          image={getImage(data.tyroPhone)!}
-          alt="Phone image of Tyro-app.com"
-          style={{position: "absolute", width: 120}}
-          className="right-8 top-44 hidden xl:block"
-          />        
         </div>
         <StyledDescription>
           <a href="https://nafhambytyro.com" className="underline">Nafham by Tyro</a> is an online e-learning startup based in Egypt that I co-founded with friends in the last year of university.
