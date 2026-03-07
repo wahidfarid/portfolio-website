@@ -19,9 +19,9 @@ export default () => {
     <SectionDivider variant="wave" topColor={GRAY_800} bottomColor={GRAY_900} />
     <AnimateOnScroll backgroundColor={GRAY_900}><ServicesSection/></AnimateOnScroll>
     <SectionDivider variant="curve" topColor={GRAY_900} bottomColor={GRAY_800} />
-    <AnimateOnScroll backgroundColor={GRAY_800}><SkillsSection/></AnimateOnScroll>
+    <AnimateOnScroll backgroundColor={GRAY_800}><PortfolioSection/></AnimateOnScroll>
     <SectionDivider variant="tilt" topColor={GRAY_800} bottomColor={GRAY_900} />
-    <AnimateOnScroll backgroundColor={GRAY_900}><PortfolioSection/></AnimateOnScroll>
-    <AnimateOnScroll backgroundColor={GRAY_900}><CTASection/></AnimateOnScroll>
+    <AnimateOnScroll backgroundColor={GRAY_900}><SkillsSection/></AnimateOnScroll>
+    <AnimateOnScroll><CTASection/></AnimateOnScroll>
   </Layout>
 }

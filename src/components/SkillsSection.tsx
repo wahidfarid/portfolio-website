@@ -46,7 +46,7 @@ const StyledSkill = tw.span`
 `
 
 const SkillsSection = () => (
-<div className="bg-gray-800 pt-16 pb-4 w-full pattern-grid">
+<div className="bg-gray-900 pt-16 pb-4 w-full pattern-grid">
   <div className="container mx-auto flex flex-col text-gray-200">
     <StyledSectionTitle>How I do it</StyledSectionTitle>
 
