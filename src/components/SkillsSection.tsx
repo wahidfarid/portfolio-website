@@ -1,7 +1,7 @@
-import React from 'react'
-import tw from 'tailwind-styled-components'
+import React from "react"
+import tw from "tailwind-styled-components"
 
-import skills from './skills'
+import skills from "./skills"
 
 const StyledSectionTitle = tw.h1`
   font-semibold
@@ -29,69 +29,112 @@ const StyledSkill = tw.span`
   py-2
   rounded-full
   ${p => {
-    switch(p.color){
+    switch (p.color) {
       case "yellow":
-        return "bg-yellow-600";
+        return "bg-yellow-600"
       case "blue":
-        return "bg-blue-600";
+        return "bg-blue-600"
       case "purple":
-        return "bg-purple-600";
+        return "bg-purple-600"
       case "red":
-        return "bg-red-600";
+        return "bg-red-600"
       case "pink":
-        return "bg-pink-600";
+        return "bg-pink-600"
     }
   }}
-  ${p => ( p.great ? '' : 'bg-opacity-50' )}
+  ${p => (p.great ? "" : "bg-opacity-50")}
 `
 
 const SkillsSection = () => (
-<div className="bg-gray-900 pt-16 pb-4 w-full pattern-grid">
-  <div className="container mx-auto flex flex-col text-gray-200">
-    <StyledSectionTitle>How I do it</StyledSectionTitle>
+  <div className="bg-gray-900 pt-16 pb-4 w-full pattern-grid">
+    <div className="container mx-auto flex flex-col text-gray-200">
+      <StyledSectionTitle>How I do it</StyledSectionTitle>
 
-    <div className="flex flex-wrap justify-center sm:divide-y-4 lg:divide-y-0 divide-dashed divide-gray-800 my-8">
-
-      <div id="frontend" className="sm:w-full lg:w-1/2 lg:border-r-4 border-dashed border-gray-800">
-        <StyledCategoryTitle>Frontend</StyledCategoryTitle>
-        <div className="flex flex-wrap justify-center pb-8">
-          {skills.frontend.great.map(skill => <StyledSkill key={skill} color="yellow" great={+true}>{skill}</StyledSkill>)}
-          {skills.frontend.average.map(skill => <StyledSkill key={skill} color="yellow" great={+false}>{skill}</StyledSkill>)}
+      <div className="flex flex-wrap justify-center sm:divide-y-4 lg:divide-y-0 divide-dashed divide-gray-800 my-8">
+        <div
+          id="frontend"
+          className="sm:w-full lg:w-1/2 lg:border-r-4 border-dashed border-gray-800"
+        >
+          <StyledCategoryTitle>Frontend</StyledCategoryTitle>
+          <div className="flex flex-wrap justify-center pb-8">
+            {skills.frontend.great.map(skill => (
+              <StyledSkill key={skill} color="yellow" great={+true}>
+                {skill}
+              </StyledSkill>
+            ))}
+            {skills.frontend.average.map(skill => (
+              <StyledSkill key={skill} color="yellow" great={+false}>
+                {skill}
+              </StyledSkill>
+            ))}
+          </div>
+        </div>
+        <div id="backend" className="sm:w-full lg:w-1/2">
+          <StyledCategoryTitle>Backend</StyledCategoryTitle>
+          <div className="flex flex-wrap justify-center pb-8">
+            {skills.backend.great.map(skill => (
+              <StyledSkill key={skill} color="blue" great={+true}>
+                {skill}
+              </StyledSkill>
+            ))}
+            {skills.backend.average.map(skill => (
+              <StyledSkill key={skill} color="blue" great={+false}>
+                {skill}
+              </StyledSkill>
+            ))}
+          </div>
+        </div>
+        <div
+          id="inbetween"
+          className="sm:w-full lg:w-1/2 lg:border-r-4 border-dashed border-gray-800 "
+        >
+          <StyledCategoryTitle>Inbetween</StyledCategoryTitle>
+          <div className="flex flex-wrap justify-center pb-8">
+            {skills.inbetween.great.map(skill => (
+              <StyledSkill key={skill} color="purple" great={+true}>
+                {skill}
+              </StyledSkill>
+            ))}
+            {skills.inbetween.average.map(skill => (
+              <StyledSkill key={skill} color="purple" great={+false}>
+                {skill}
+              </StyledSkill>
+            ))}
+          </div>
+        </div>
+        <div id="devops" className="sm:w-full lg:w-1/2">
+          <StyledCategoryTitle>Devops / Architecture</StyledCategoryTitle>
+          <div className="flex flex-wrap justify-center pb-8">
+            {skills.devops.great.map(skill => (
+              <StyledSkill key={skill} color="red" great={+true}>
+                {skill}
+              </StyledSkill>
+            ))}
+            {skills.devops.average.map(skill => (
+              <StyledSkill key={skill} color="red" great={+false}>
+                {skill}
+              </StyledSkill>
+            ))}
+          </div>
+        </div>
+        <div id="other" className="sm:w-full lg:w-1/2">
+          <StyledCategoryTitle>Other</StyledCategoryTitle>
+          <div className="flex flex-wrap justify-center pb-8">
+            {skills.other.great.map(skill => (
+              <StyledSkill key={skill} color="pink" great={+true}>
+                {skill}
+              </StyledSkill>
+            ))}
+            {skills.other.average.map(skill => (
+              <StyledSkill key={skill} color="pink" great={+false}>
+                {skill}
+              </StyledSkill>
+            ))}
+          </div>
         </div>
       </div>
-      <div id="backend" className="sm:w-full lg:w-1/2">
-        <StyledCategoryTitle>Backend</StyledCategoryTitle>
-        <div className="flex flex-wrap justify-center pb-8">
-          {skills.backend.great.map(skill => <StyledSkill key={skill} color="blue" great={+true}>{skill}</StyledSkill>)}
-          {skills.backend.average.map(skill => <StyledSkill key={skill} color="blue" great={+false}>{skill}</StyledSkill>)}
-        </div>
-      </div>
-      <div id="inbetween" className="sm:w-full lg:w-1/2 lg:border-r-4 border-dashed border-gray-800 ">
-        <StyledCategoryTitle>Inbetween</StyledCategoryTitle>
-        <div className="flex flex-wrap justify-center pb-8">
-          {skills.inbetween.great.map(skill => <StyledSkill key={skill} color="purple" great={+true}>{skill}</StyledSkill>)}
-          {skills.inbetween.average.map(skill => <StyledSkill key={skill} color="purple" great={+false}>{skill}</StyledSkill>)}
-        </div>
-      </div>
-      <div id="devops" className="sm:w-full lg:w-1/2">
-        <StyledCategoryTitle>Devops / Architecture</StyledCategoryTitle>
-        <div className="flex flex-wrap justify-center pb-8">
-          {skills.devops.great.map(skill => <StyledSkill key={skill} color="red" great={+true}>{skill}</StyledSkill>)}
-          {skills.devops.average.map(skill => <StyledSkill key={skill} color="red" great={+false}>{skill}</StyledSkill>)}
-        </div>
-      </div>
-      <div id="other" className="sm:w-full lg:w-1/2">
-        <StyledCategoryTitle>Other</StyledCategoryTitle>
-        <div className="flex flex-wrap justify-center pb-8">
-          {skills.other.great.map(skill => <StyledSkill key={skill} color="pink" great={+true}>{skill}</StyledSkill>)}
-          {skills.other.average.map(skill => <StyledSkill key={skill} color="pink" great={+false}>{skill}</StyledSkill>)}
-        </div>
-      </div>
-
     </div>
-
   </div>
-</div>
 )
 
 export default SkillsSection

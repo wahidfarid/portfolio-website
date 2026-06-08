@@ -1,5 +1,5 @@
-import React from 'react'
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import React from "react"
+import { useScrollAnimation } from "../hooks/useScrollAnimation"
 
 interface AnimateOnScrollProps {
   children: React.ReactNode
@@ -7,7 +7,11 @@ interface AnimateOnScrollProps {
   backgroundColor?: string
 }
 
-const AnimateOnScroll = ({ children, delay = 0, backgroundColor }: AnimateOnScrollProps) => {
+const AnimateOnScroll = ({
+  children,
+  delay = 0,
+  backgroundColor,
+}: AnimateOnScrollProps) => {
   const { ref, isVisible } = useScrollAnimation()
 
   return (
@@ -16,7 +20,7 @@ const AnimateOnScroll = ({ children, delay = 0, backgroundColor }: AnimateOnScro
         ref={ref}
         style={{
           opacity: isVisible ? 1 : 0,
-          transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+          transform: isVisible ? "translateY(0)" : "translateY(30px)",
           transition: `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms`,
         }}
       >

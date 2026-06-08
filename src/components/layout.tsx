@@ -2,25 +2,29 @@ import React from "react"
 import PropTypes from "prop-types"
 import tw from "tailwind-styled-components"
 
-import '../styles/global.css';
+import "../styles/global.css"
 import SEO from "./seo"
 
 const StyledLayout = tw.div`
   dark
   bg-gray-800
+  min-h-screen
+  flex
+  flex-col
   w-screen
-  h-full
   text-white
 `
 
 const Layout = ({ children }) => {
-
   return (
     <StyledLayout>
       <SEO title="Home" />
-      <main>{children}</main>
+      <main className="flex-grow">
+        {children}
+      </main>
       <footer className="bg-gray-900 text-center pb-4 text-sm lg:text-md">
-        © {new Date().getFullYear()}, Built with ❤️, Born in 🇪🇬, Located in 🇯🇵, Powered by 🍟
+        © {new Date().getFullYear()}, Built with ❤️, Born in 🇪🇬, Located in 🇯🇵,
+        Powered by 🍟
       </footer>
     </StyledLayout>
   )

@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from "react"
 
 export function useScrollAnimation() {
   // Default to visible during SSR to avoid flash of invisible content
-  const [isVisible, setIsVisible] = useState(typeof window === 'undefined')
+  const [isVisible, setIsVisible] = useState(typeof window === "undefined")
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function useScrollAnimation() {
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     )
 
     observer.observe(element)

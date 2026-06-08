@@ -90,7 +90,7 @@ const PortfolioSection = () => {
             <br/>
           - Host an annual Hackathon event to foster connections between IT and non-IT and generate new ideas leading to new production features
             <br/>
-          - Upgrade tooling and frameworks across the organization (webpack -> vite, Upgrade React, Upgrade EmberJS, Convert JS to Typescript, Optimize CI/CD pipelines) to improve build times by 65~%
+          - Upgrade tooling and frameworks across the organization (webpack {"->"} vite, Upgrade React, Upgrade EmberJS, Convert JS to Typescript, Optimize CI/CD pipelines) to improve build times by 65~%
         </StyledDescription>
       </StyledProject>
       <StyledProject>

@@ -1,5 +1,5 @@
-import React from 'react';
-import tw from 'tailwind-styled-components';
+import React from "react"
+import tw from "tailwind-styled-components"
 
 const StyledGetInTouchButton = tw.a`
   bg-gray-600
@@ -16,11 +16,13 @@ const StyledGetInTouchButton = tw.a`
   duration-200
 `
 
-type CTAProps ={
+type CTAProps = {
   text?: string
 }
 const CTAButton = (props: CTAProps) => (
-  <StyledGetInTouchButton href="mailto:hello@wahidfarid.dev" target="_blank">{props.text || "Get in touch"}</StyledGetInTouchButton>
+  <StyledGetInTouchButton href="mailto:hello@wahidfarid.dev" target="_blank">
+    {props.text || "Get in touch"}
+  </StyledGetInTouchButton>
 )
 
-export default CTAButton;
+export default CTAButton
